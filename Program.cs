@@ -1,6 +1,7 @@
 using Celsia.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,6 +11,14 @@ builder.Services.AddDbContext<DataContext>(options =>
                             options.UseMySql(
                                 builder.Configuration.GetConnectionString("MySqlConnection"),
                                 Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true; 
+    options.Cookie.IsEssential = true; 
+});
 
 var app = builder.Build();
 

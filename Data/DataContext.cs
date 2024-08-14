@@ -13,6 +13,7 @@ namespace Celsia.Data
         public DbSet<Invoice> Invoices {get; set; }
         public DbSet<Transaction> Transactions {get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<User> UsersAuthentications {get; set; }
 
 
 
