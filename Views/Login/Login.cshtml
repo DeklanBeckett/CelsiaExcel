@@ -1,0 +1,77 @@
+@model Celsia.DTO.userDTO;
+
+<div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <img class="img-fluid" width="100%" src="data:image/png;base64,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" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                                    </div>
+                                    @* <form class="user" asp-action="Auth"  >
+                                        <div class="form-group ">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Ingresa ru correo"  name="email"  required autofocus asp-for="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Contraseña" name="password" asp-for="Password" required autofocus>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-primary btn-user btn-block mt-5">Login</button>
+                                        <hr>
+                                        
+                                    </form> *@
+                                    <form asp-action="Login" method="post" class="user">
+                                        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Email" type="email"class="form-control form-control-user" id="InputEmail" placeholder="Email" required autofocus>
+                                            <label for="InputEmail">Correo</label>
+                                            <div class="invalid-feedback" data-sb-feedback="Email:required">Campo requerido.</div>
+                                            <div class="invalid-feedback" data-sb-feedback="Email:email">Correo electrónico no válido.</div>
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Password" type="password"  class="form-control form-control-user" id="InputPassword" placeholder="Password" required autofocus>
+                                            <label for="InputPassword">Contraseña</label>
+                                            <div class="invalid-feedback" data-sb-feedback="Password:required">Campo requerido.</div>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="d-grid mb-2">
+                                            <button type="submit" class="btn btn-primary btn-user btn-block mt-5" >Login</button>
+                                        </div>
+
+                                    
+                    </form>
+
+
+                                    <div class="text-center">
+                                        <a class="small" href="register.html">Create an Account!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
